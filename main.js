@@ -10,6 +10,7 @@ let current_slide = 1;
 carousel.style.transform = "translateX(" + (-size * current_slide) + 'px)';
 
 next_button.addEventListener('click', function(){
+    if ( current_slide >= 4)return;
     carousel.style.transition = 'transform 0.4s ease-in-out';
     current_slide++;
     console.log(current_slide);
