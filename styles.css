@@ -109,11 +109,27 @@ header nav {
     width:80%;
     margin:auto;
     overflow: hidden;
-
 }
 .carousel-slide{
     display: flex;
     transform: translateX(-1236px);
+}
+/* carousel arrows  */
+#prev {
+    cursor: pointer;
+    top:50%;
+    left: 3%;
+    position: absolute;
+}
+#next {
+    cursor: pointer;
+    top:50%;
+    right: 3%;
+    position: absolute;
+}
+.arrow{
+    width:30px;
+    height: 30px;
 }
 .presentation {
     display: flex;
@@ -123,6 +139,7 @@ header nav {
     animation: drop 1.5s ease;
     flex-shrink: 0;
 }
+
 
 .text-buttons {
     /* flex: 1; */
