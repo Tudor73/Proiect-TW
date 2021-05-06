@@ -5,17 +5,7 @@
 }
 a {
     color: white;
-}
-button{
-    font-family: 'Montserrat', sans-serif;
-    cursor: pointer;
-}
-.fas {
-    margin-left: 5px;
-}
-.fa-heart{
-    margin-left: 5px;
-    font-size: 15px;    
+    text-decoration: none;
 }
 /* header section  */
 .container{
@@ -107,109 +97,25 @@ header nav {
     display:block;
 }
 
-/* main section  */
-.carousel-container{
-    width:80%;
+
+/* cart-container  */
+
+.cart-container{
+    width: 70%;
     margin:auto;
-    overflow: hidden;
 }
-.carousel-slide{
+
+.item{
+    margin-top: 4%;
+    margin-bottom: 2%;
     display: flex;
-    transform: translateX(-1236px);
+    border: 1px solid #999;
+    box-shadow: -2px 2px 5px #999;
+    height: 250px;
+    justify-content: space-between;
 }
-/* carousel arrows  */
-#prev {
-    cursor: pointer;
-    top:50%;
-    left: 3%;
-    position: absolute;
-}
-#next {
-    cursor: pointer;
-    top:50%;
-    right: 3%;
-    position: absolute;
-}
-.arrow{
-    width:30px;
-    height: 30px;
-}
-.presentation {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 60vh;
-    animation: drop 1.5s ease;
-    flex-shrink: 0;
-}
-
-
-.text-buttons {
-    /* flex: 1; */
-    margin-top: 12%;
-}
-.text h1{
-    font-size:35px;
-    letter-spacing: 1px;
-}
-.text p {
-    padding: 20px 0px;
-    line-height: 1.5rem;
-}
-.text h3{
-    font-weight: 500;
-    opacity: 0.7;
-}
-.guitar-image{
-    /* flex: 1; */
-    text-align: center;
-    margin-top: 5%;
-    padding-left: 10%;
-}
-.guitar-image img{
-    height:50vh;
-}
-
-.buttons{
-    padding-top:30px;
-}
-.add-to-cart{
-    background-color: #f48b29;
-    color:white;
-    font-size:15px;
-    width:150px;
-    height:50px;
-    border:none;
-    margin-right:20px;
-    border-radius: 10px;
-}
-.add-to-cart:hover{
-    background-color: #e67307;
-}
-.add-to-favourites{
-    border: 2px solid #f48b29;
-    font-size:15px;
-    width:170px;
-    height:50px;
-    background: transparent;   
-    color:#f48b29;
-    border-radius: 10px;
-
-}
-.add-to-favourites:hover{
-    background-color: #e67307;
-    color: white;
-}
-
-@keyframes drop{
-    0%{
-        opacity: 0;
-        transform: translateY(80px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
+.guitar-img{
+    padding: 10px;
 }
 
 @media screen and(max-width: 501px){
@@ -227,7 +133,7 @@ header nav {
     }
 }
 
- @media screen and (max-width: 900px){
+@media screen and (max-width: 900px){
     .title a{
         font-size:30px;
     }
@@ -241,8 +147,3 @@ header nav {
         display:inline-block;
     }
  }  
-/* 
-@media screen and (min-width: 1500px){
-
-    
-} */
