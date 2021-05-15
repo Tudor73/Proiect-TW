@@ -30,6 +30,27 @@ prev_button.addEventListener('click', function(){
     carousel.style.transform = "translateX(" + (-size * current_slide) + 'px)';
 });
 
+document.onkeydown = function(e){
+    if(e.key == "ArrowRight" ){
+        if ( current_slide >= 4)return;
+        carousel.style.transition = 'transform 0.4s ease-in-out';
+        current_slide++;
+        console.log(current_slide);
+        if (current_slide === 3){ // fixes a front-end bug 
+            carousel.style.transform = "translateX(" + (-size * current_slide + 2) + 'px)';
+        }
+        else{
+            carousel.style.transform = "translateX(" + (-size * current_slide) + 'px)';
+        }
+    }
+    if(e.key === "ArrowLeft"){
+        if (current_slide <= 0)return;
+        carousel.style.transition = 'transform 0.4s ease-in-out';
+        current_slide--;
+        carousel.style.transform = "translateX(" + (-size * current_slide) + 'px)';
+    }
+}
+
 carousel.addEventListener('transitionend', function(){
     if(slides[current_slide].classList.contains("lastCopy")){
         carousel.style.transition = "none";
@@ -49,7 +70,7 @@ add_to_cart.addEventListener('click', function(){
 
 function addToLocalStorage(item){
     let obj = {};
-    price = 0;
+    let price ;
     guitar_name = item.classList[1]
     obj['guitar'] = guitar_name;
     switch(guitar_name){
@@ -57,13 +78,13 @@ function addToLocalStorage(item){
             price = 999.99;
             break;
         case "strat":
-            price = 599.99;
+            price = 599.99
             break;
         case "ibanez":
             price = 799.99;
             break;
     }
-    obj["price"] = String(price+'$');
+    obj["price"] = price;
     let guitars;
     if(localStorage.getItem('guitars') === null){
         guitars = [];

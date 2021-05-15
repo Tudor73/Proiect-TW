@@ -7,6 +7,9 @@ a {
     color: white;
     text-decoration: none;
 }
+h2{
+    letter-spacing: 1px;
+}
 /* header section  */
 .container{
     background-color: #f48b29;
@@ -110,12 +113,89 @@ header nav {
     margin-bottom: 2%;
     display: flex;
     border: 1px solid #999;
-    box-shadow: -2px 2px 5px #999;
+    box-shadow: -2px 2px 5px #888;
     height: 250px;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 .guitar-img{
     padding: 10px;
+    height: 250px;
+    width:255px
+}
+.remove{
+    font-size: 30px;
+    color: rgba(204, 14, 14, 0.938);
+    cursor: pointer;
+}
+.purchase-container{
+    width: 70%;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+}
+.mesaj {
+    margin-top: 1%; 
+}
+.purchase {
+    background-color: #f48b29;
+    color:white;
+    font-size:15px;
+    width:150px;
+    height:50px;
+    border:none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.purchase:hover{
+    background-color: #e67307;
+}
+
+
+/* login page   */
+input {
+    width: 50%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid grey;
+    border-radius: 4px;
+}
+input:focus {
+    border: 2px solid lightblue;
+    border-radius: 4px;
+  }
+.form-container{
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    width: 40%;
+    height: 50vh;
+    margin:auto;
+    margin-top: 5%;
+}
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login{
+    margin-top: 5px;
+    background-color: #f48b29;
+    color:white;
+    font-size:16px;
+    width:150px;
+    height:50px;
+    border:none;
+    margin-right:20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login:hover{
+    background-color: #e67307;
 }
 
 @media screen and(max-width: 501px){
@@ -128,7 +208,7 @@ header nav {
     .buttons {
         height: 150px;
     }
-    .add-to-cart{
+    .remove-from-cart{
         margin-bottom: 10px;
     }
 }
